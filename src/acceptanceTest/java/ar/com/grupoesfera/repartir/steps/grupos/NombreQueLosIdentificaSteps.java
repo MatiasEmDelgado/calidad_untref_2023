@@ -65,6 +65,13 @@ public class NombreQueLosIdentificaSteps extends CucumberSteps {
         driver.findElement(By.id("guardarGrupoNuevoButton")).click();
     }
 
+    @Cuando("el usuario intenta crear un grupo indicando el nombre con unico caracter {string}")
+    public void elUsuarioIntentaCrearUnGrupoIndicandoElNombreConUnicoCaracter() {
+
+        // TODO
+    }
+
+
     @Entonces("no debería crear el grupo con nombre de un solo caracter")
     public void noDeberiaCrearElGrupocinNombreDeUnSoloCaracter() {
 
