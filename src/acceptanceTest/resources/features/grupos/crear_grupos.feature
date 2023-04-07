@@ -16,6 +16,12 @@ Característica: Crear Grupo para repartir gastos
       Entonces no debería crear el grupo sin nombre
       Y debería ser informado que no puede crear un grupo sin nombre
 
+  Regla: Un grupo conformado no puede tener un nombre de un único caracter
+    Escenario: Crea un grupo con nombre
+          Dado que el usuario inició Repartir
+          Cuando el usuario crea un grupo indicando el nombre 'A'
+          Entonces debería informarce que no se puede crear un grupo con nombre de un único caracter
+
   Regla: Los grupos están compuestos por al menos dos miembros
 
     Escenario: Crea un grupo con dos miembros
