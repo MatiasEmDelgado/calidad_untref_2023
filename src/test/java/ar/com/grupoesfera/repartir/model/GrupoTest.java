@@ -73,6 +73,19 @@ class GrupoTest {
         grupo.setMiembros(List.of(miembros));
         assertThat(grupo.getMiembros().size()).isEqualTo(3);
     }
+
+    @Test
+    void noEstaFormadoCuandoElGrupoNoTieneNombre() {
+
+        Grupo grupo = new Grupo();
+        grupo.setMiembros(Arrays.asList("mtolosa", "sdiaz"));
+
+        boolean estaFormado = grupo.estaFormado();
+
+        assertThat(estaFormado).isFalse();
+
+    }
+
     @Test
     void noEstaFormadoCuandoElNombreEsUnSoloCaracter() {
 
