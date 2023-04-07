@@ -66,16 +66,34 @@ public class NombreQueLosIdentificaSteps extends CucumberSteps {
     }
 
     @Cuando("el usuario intenta crear un grupo indicando el nombre con unico caracter {string}")
-    public void elUsuarioIntentaCrearUnGrupoIndicandoElNombreConUnicoCaracter() {
+    public void elUsuarioIntentaCrearUnGrupoIndicandoElNombreConUnicoCaracter(String nombreDeUnSoloCaracter) {
 
-        // TODO
+        nombreIndicado = nombreDeUnSoloCaracter;
+
+        var crearGruposButton = driver.findElement(By.id("crearGruposButton"));
+        crearGruposButton.click();
+
+        var nuevoGrupoNombreInput = driver.findElement(By.id("nombreGrupoNuevoInput"));
+        nuevoGrupoNombreInput.sendKeys(nombreDeUnSoloCaracter);
+        nuevoGrupoNombreInput.sendKeys(Keys.ENTER);
+
+        var miembrosInput = driver.findElement(By.id("miembrosGrupoNuevoInput"));
+        miembrosInput.sendKeys("Carla");
+        miembrosInput.sendKeys(Keys.ENTER);
+        miembrosInput.sendKeys("Miguel");
+        miembrosInput.sendKeys(Keys.ENTER);
+
+        driver.findElement(By.id("guardarGrupoNuevoButton")).click();
     }
 
 
     @Entonces("no debería crear el grupo con nombre de un solo caracter")
-    public void noDeberiaCrearElGrupocinNombreDeUnSoloCaracter() {
+    public void noDeberiaCrearElGrupoSinNombreDeUnSoloCaracter() {
+        var grupoTR = driver.findElements(By.cssSelector("app-grupos table tr"));
+        assertThat(grupoTR).hasSize(0);
 
-        // TODO
+        var campoTDs = grupoTR.get(1).findElements(By.tagName("td"));
+        assertThat(campoTDs.get(0)).isNull();
     }
     @Entonces("no debería crear el grupo sin nombre")
     public void noDeberiaCrearElGrupoSinNombre() {
