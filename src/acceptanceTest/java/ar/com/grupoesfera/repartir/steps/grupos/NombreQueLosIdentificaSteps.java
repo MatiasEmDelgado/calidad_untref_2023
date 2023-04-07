@@ -98,7 +98,11 @@ public class NombreQueLosIdentificaSteps extends CucumberSteps {
     @Entonces("no debería crear el grupo sin nombre")
     public void noDeberiaCrearElGrupoSinNombre() {
 
-       // TODO
+        var grupoTR = driver.findElements(By.cssSelector("app-grupos table tr"));
+        assertThat(grupoTR).hasSize(0);
+
+        var campoTDs = grupoTR.get(1).findElements(By.tagName("td"));
+        assertThat(campoTDs.get(0)).isNull();
     }
 
     @Y("debería informarce que no se puede crear un grupo con nombre de un único caracter")
