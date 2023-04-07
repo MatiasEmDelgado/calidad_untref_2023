@@ -37,6 +37,7 @@ class GrupoTest {
     void noEstaFormadoCuandoTieneSoloUnMiembro() {
 
         Grupo grupo = new Grupo();
+        grupo.setNombre("Calidad");
         grupo.setMiembros(Arrays.asList("martin"));
 
         boolean estaFormado = grupo.estaFormado();
@@ -48,6 +49,7 @@ class GrupoTest {
     void estaFormadoCuandoTieneDosMiembros() {
 
         Grupo grupo = new Grupo();
+        grupo.setNombre("Calidad");
         grupo.setMiembros(Arrays.asList("mtolosa", "sdiaz"));
 
         boolean estaFormado = grupo.estaFormado();
@@ -59,7 +61,7 @@ class GrupoTest {
     void noEstaFormadoCuandoLosMiembrosSonNulos() {
 
         Grupo grupo = new Grupo();
-
+        grupo.setNombre("Calidad");
         grupo.setMiembros(null);
 
         assertThat(grupo.estaFormado()).isFalse();
@@ -69,6 +71,7 @@ class GrupoTest {
     @Test
     void cantidadDeMiembrosCorrectaAlAgregarMiembros() {
         Grupo grupo = new Grupo();
+        grupo.setNombre("Calidad");
         String [] miembros = {"Pepe Grillo","Pep Guardiola","Pipino Cuevas"};
         grupo.setMiembros(List.of(miembros));
         assertThat(grupo.getMiembros().size()).isEqualTo(3);
