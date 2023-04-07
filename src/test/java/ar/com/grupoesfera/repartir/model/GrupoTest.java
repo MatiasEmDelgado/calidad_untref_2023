@@ -65,6 +65,7 @@ class GrupoTest {
         assertThat(grupo.estaFormado()).isFalse();
     }
 
+    //consigna anterior, agregar un test cualquiera
     @Test
     void cantidadDeMiembrosCorrectaAlAgregarMiembros() {
         Grupo grupo = new Grupo();
@@ -72,4 +73,11 @@ class GrupoTest {
         grupo.setMiembros(List.of(miembros));
         assertThat(grupo.getMiembros().size()).isEqualTo(3);
     }
+    @Test
+    void noEstaFormadoCuandoElNombreEsUnSoloCaracter() {
+
+        // TODO
+
+    }
+
 }
