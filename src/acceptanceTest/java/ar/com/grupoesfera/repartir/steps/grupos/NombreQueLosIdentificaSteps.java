@@ -103,11 +103,11 @@ public class NombreQueLosIdentificaSteps extends CucumberSteps {
 
     @Entonces("no debería crear el grupo con nombre de un solo caracter")
     public void noDeberiaCrearElGrupoSinNombreDeUnSoloCaracter() {
-        //var grupoTR = driver.findElements(By.cssSelector("app-grupos table tr"));
-        //assertThat(grupoTR).hasSize(0);
+        var grupoTR = driver.findElements(By.cssSelector("app-grupos table tr"));
+        assertThat(grupoTR).hasSize(0);
 
-        //var campoTDs = grupoTR.get(1).findElements(By.tagName("td"));
-        //assertThat(campoTDs.get(0)).isNull();
+        var campoTDs = grupoTR.get(1).findElements(By.tagName("td"));
+        assertThat(campoTDs.get(0)).isNull();
     }
     @Entonces("no debería crear el grupo sin nombre")
     public void noDeberiaCrearElGrupoSinNombre() {
