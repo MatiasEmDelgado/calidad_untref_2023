@@ -92,12 +92,12 @@ class GrupoTest {
     @Test
     void noEstaFormadoCuandoElNombreEsUnSoloCaracter() {
 
-       // Grupo grupo = new Grupo();
-        //grupo.setMiembros(Arrays.asList("mtolosa", "sdiaz"));
-        //grupo.setNombre("A");
-        //boolean estaFormado = grupo.estaFormado();
+        Grupo grupo = new Grupo();
+        grupo.setMiembros(Arrays.asList("mtolosa", "sdiaz"));
+        grupo.setNombre("A");
+        boolean estaFormado = grupo.estaFormado();
 
-        //assertThat(estaFormado).isFalse();
+        assertThat(estaFormado).isFalse();
 
     }
 
