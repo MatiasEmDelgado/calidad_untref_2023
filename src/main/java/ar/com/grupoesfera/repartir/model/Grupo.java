@@ -48,7 +48,7 @@ public class Grupo {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if (nombre.length() > 1) this.nombre = nombre;
     }
 
     public List<String> getMiembros() {
