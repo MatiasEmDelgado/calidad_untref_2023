@@ -22,6 +22,10 @@ Característica: Crear Grupo para repartir gastos
           Entonces no debería crear el grupo con nombre de un solo caracter
           Y debería informarce que no se puede crear un grupo con nombre de un único caracter
 
+    Escenario: Se admite crear un grupo con nombre de al menos dos caracteres
+              Dado que el usuario inició Repartir
+              Cuando el usuario crea un grupo indicando el nombre 'AA'
+              Entonces debería visualizar dentro del listado el grupo con el nombre indicado
 
   Regla: Los grupos están compuestos por al menos dos miembros
 
