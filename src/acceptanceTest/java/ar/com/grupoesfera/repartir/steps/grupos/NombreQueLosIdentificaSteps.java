@@ -79,28 +79,6 @@ public class NombreQueLosIdentificaSteps extends CucumberSteps {
         wait.until(visibilityOfElementLocated(By.id("mensajesToast")));
     }
 
-    @Cuando("el usuario intenta crear un grupo indicando el nombre {string}")
-    public void elUsuarioIntentaCrearUnGrupoIndicandoElNombreConUnicoCaracter(String nombreDeUnSoloCaracter) {
-
-        nombreIndicado = nombreDeUnSoloCaracter;
-
-        var crearGruposButton = driver.findElement(By.id("crearGruposButton"));
-        crearGruposButton.click();
-
-        var nuevoGrupoNombreInput = driver.findElement(By.id("nombreGrupoNuevoInput"));
-        nuevoGrupoNombreInput.sendKeys(nombreDeUnSoloCaracter);
-        nuevoGrupoNombreInput.sendKeys(Keys.ENTER);
-
-        var miembrosInput = driver.findElement(By.id("miembrosGrupoNuevoInput"));
-        miembrosInput.sendKeys("Carla");
-        miembrosInput.sendKeys(Keys.ENTER);
-        miembrosInput.sendKeys("Miguel");
-        miembrosInput.sendKeys(Keys.ENTER);
-
-        driver.findElement(By.id("guardarGrupoNuevoButton")).click();
-    }
-
-
     @Entonces("no debería crear el grupo con nombre de un solo caracter")
     public void noDeberiaCrearElGrupoSinNombreDeUnSoloCaracter() {
         var grupoTR = driver.findElements(By.cssSelector("app-grupos table tr"));
