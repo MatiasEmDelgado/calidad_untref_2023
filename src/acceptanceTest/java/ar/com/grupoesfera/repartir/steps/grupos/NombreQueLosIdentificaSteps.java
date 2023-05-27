@@ -79,7 +79,7 @@ public class NombreQueLosIdentificaSteps extends CucumberSteps {
         wait.until(visibilityOfElementLocated(By.id("mensajesToast")));
     }
 
-    @Cuando("el usuario intenta crear un grupo indicando el nombre con unico caracter {string}")
+    @Cuando("el usuario intenta crear un grupo indicando el nombre {string}")
     public void elUsuarioIntentaCrearUnGrupoIndicandoElNombreConUnicoCaracter(String nombreDeUnSoloCaracter) {
 
         nombreIndicado = nombreDeUnSoloCaracter;
