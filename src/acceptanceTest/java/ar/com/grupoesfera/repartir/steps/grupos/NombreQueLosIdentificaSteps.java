@@ -53,17 +53,6 @@ public class NombreQueLosIdentificaSteps extends CucumberSteps {
     @Cuando("el usuario intenta crear un grupo sin indicar su nombre")
     public void elUsuarioIntentaCrearUnGrupoSinIndicarSuNombre() {
 
-       // var crearGruposButton = driver.findElement(By.id("crearGruposButton"));
-      //  crearGruposButton.click();
-
-      //  var miembrosInput = driver.findElement(By.id("miembrosGrupoNuevoInput"));
-      //  miembrosInput.sendKeys("Carla");
-       // miembrosInput.sendKeys(Keys.ENTER);
-      //  miembrosInput.sendKeys("Miguel");
-      //  miembrosInput.sendKeys(Keys.ENTER);
-
-       // driver.findElement(By.id("guardarGrupoNuevoButton")).click();
-
         var wait = new WebDriverWait(driver, 2);
         var crearGruposButton = wait.until(elementToBeClickable(By.id("crearGruposButton")));
         crearGruposButton.click();
