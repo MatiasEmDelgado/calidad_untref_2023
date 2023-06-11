@@ -73,7 +73,7 @@ public class NombreQueLosIdentificaSteps extends CucumberSteps {
         response.statusCode(400);
     }
 
-    @Y("debería ser informado que no puede crear un grupo sin nombre")
+    @Y("debería informarse que no se puede crear grupo (.+)")
     public void deberiaSerInformadoQueNoPuedeCrearUnGrupoSinNombre() {
 
         response.body("mensaje", equalTo("El nombre es requerido"));

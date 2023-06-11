@@ -13,7 +13,7 @@ Característica: Crear Grupo para repartir gastos
       Dado que el usuario inició Repartir
       Cuando el usuario intenta crear un grupo sin indicar su nombre
       Entonces no debería crear el grupo sin nombre
-      Y debería ser informado que no puede crear un grupo sin nombre
+      Y debería informarse que no se puede crear grupo sin nombre
 
   Regla: Los grupos están compuestos por al menos dos miembros
 
