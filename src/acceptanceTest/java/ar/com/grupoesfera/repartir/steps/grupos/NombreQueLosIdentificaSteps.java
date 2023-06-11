@@ -75,8 +75,8 @@ public class NombreQueLosIdentificaSteps extends CucumberSteps {
         assertThat(campoTDs).hasSize(0);
     }
 
-    @Y("debería informarce que no se puede crear un grupo con nombre de un único caracter")
-    public void deberiaInformarceQueNoSePuedeCrearUnGrupoConNombreDeUnUnicoCaracter() {
+    @Y("debería informarse que no se puede crear un grupo con nombre de un único caracter")
+    public void deberiaInformarseQueNoSePuedeCrearUnGrupoConNombreDeUnUnicoCaracter() {
         var wait = new WebDriverWait(driver, 2);
         var mensajesToast = wait.withMessage("Mostro Toast")
                 .until(visibilityOfElementLocated(By.id("mensajesToast")));

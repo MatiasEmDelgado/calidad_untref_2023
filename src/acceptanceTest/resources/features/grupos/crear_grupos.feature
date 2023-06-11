@@ -20,7 +20,7 @@ Característica: Crear Grupo para repartir gastos
           Dado que el usuario inició Repartir
           Cuando el usuario crea un grupo indicando el nombre 'A'
           Entonces no se debería crear el grupo con nombre de un solo caracter
-          Y debería informarce que no se puede crear un grupo con nombre de un único caracter
+          Y debería informarse que no se puede crear un grupo con nombre de un único caracter
 
     Escenario: Se admite crear un grupo con nombre de al menos dos caracteres
               Dado que el usuario inició Repartir
